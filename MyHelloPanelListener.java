@@ -12,11 +12,33 @@ public class MyHelloPanelListener extends JPanel implements MouseListener, KeyLi
 {
     JLabel jl;
     public MyHelloPanelListener(){
-        jl = new JLabel("Hello");
+        jl = new JLabel("HELLO");
         add(jl);
+        this.addMouseListener(this);
+        this.addKeyListener(this);
+        this.setFocusable(true);
+        this.requestFocus();
     }
     
     public void keyReleased(KeyEvent e){
+        int x = jl.getX();
+        int y = jl.getY();
+        if (e.getKeyCode() == KeyEvent.VK_UP){
+            y -= 10;
+            jl.setLocation(x,y);
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_DOWN){
+            y += 10;
+            jl.setLocation(x,y);
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_LEFT){
+            x -= 10;
+            jl.setLocation(x,y);
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_RIGHT){
+            x += 10;
+            jl.setLocation(x,y);
+        }
     }
     public void keyPressed(KeyEvent e){
     }
@@ -27,6 +49,9 @@ public class MyHelloPanelListener extends JPanel implements MouseListener, KeyLi
         int x = e.getX(); // 마우스의 X 좌표
         int y = e.getY(); // 마우스의 Y 좌표
         jl.setLocation(x,y);
+        
+        this.setFocusable(true);
+        this.requestFocus();
     }
     public void mouseEntered(MouseEvent e){
         
