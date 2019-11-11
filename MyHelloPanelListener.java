@@ -42,9 +42,11 @@ public class MyHelloPanelListener extends JPanel implements MouseListener, KeyLi
     }
     public void keyTyped(KeyEvent e){}
     public void mouseClicked(MouseEvent e){
-        int x = e.getX(); // 마우스의 X 좌표
-        int y = e.getY(); // 마우스의 Y 좌표
-        jl.setLocation(x,y);
+        Point p = e.getPoint();
+        jl.setLocation(p);
+        // int x = e.getX(); // 마우스의 X 좌표
+        // int y = e.getY(); // 마우스의 Y 좌표
+        // jl.setLocation(x,y);
         
         this.setFocusable(true);
         this.requestFocus();
