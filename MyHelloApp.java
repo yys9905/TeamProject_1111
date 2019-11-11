@@ -1,33 +1,12 @@
-
 /**
- * Write a description of class MyHelloApp here.
+ * MyHelloFrame객체를 생성후 프로그램 실행시키는 클래스
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (2018315036 양유석 2018315039 이윤재)
+ * @version (2019.11.11)
  */
 public class MyHelloApp
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class MyHelloApp
-     */
-    public MyHelloApp()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void main(String[] args){
+        MyHelloFrame mf = new MyHelloFrame();
     }
 }
