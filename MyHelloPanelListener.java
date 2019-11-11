@@ -13,17 +13,20 @@ public class MyHelloPanelListener extends JPanel implements MouseListener, KeyLi
     JLabel jl;
     public MyHelloPanelListener(){
         jl = new JLabel("Hello");
+        add(jl);
     }
     
     public void keyReleased(KeyEvent e){
-        
     }
     public void keyPressed(KeyEvent e){
     }
     public void keyTyped(KeyEvent e){
     }
+    
     public void mouseClicked(MouseEvent e){
-        
+        int x = e.getX(); // 마우스의 X 좌표
+        int y = e.getY(); // 마우스의 Y 좌표
+        jl.setLocation(x,y);
     }
     public void mouseEntered(MouseEvent e){
         
