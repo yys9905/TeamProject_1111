@@ -19,8 +19,10 @@ public class MyHelloFrame extends JFrame
         jp = new JPanel(); //새로운 패널 생성
         jl = new JLabel("HELLO"); //새로운 레이블 생성
         jp.add(jl);// 패널에 레이블 추가하기
-        addMouseListener(new MyHelloPanelListener(jl));
-        addKeyListener(new MyHelloPanelListener(jl));
+        this.add(jp);
+        MyHelloPanelListener ml = new MyHelloPanelListener(jl);
+        addMouseListener(ml);
+        addKeyListener(ml);
     }
 
 }
