@@ -8,12 +8,13 @@ import javax.swing.event.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class MyHelloPanelListener extends MouseAdapter implements KeyListener
+public class MyHelloPanelListener extends JPanel implements MouseListener, KeyListener
 {
     JLabel jl;
-    public MyHelloPanelListener(JLabel jl){
-        this.jl = jl;
+    public MyHelloPanelListener(){
+        jl = new JLabel("Hello");
     }
+    
     public void keyReleased(KeyEvent e){
         
     }
@@ -21,6 +22,19 @@ public class MyHelloPanelListener extends MouseAdapter implements KeyListener
     }
     public void keyTyped(KeyEvent e){
     }
+    public void mouseClicked(MouseEvent e){
+        
+    }
+    public void mouseEntered(MouseEvent e){
+        
+    }
+    public void mouseExited(MouseEvent e){
+        
+    }
     public void mousePressed(MouseEvent e){
+        
+    }
+    public void mouseReleased(MouseEvent e){
+        
     }
 }
